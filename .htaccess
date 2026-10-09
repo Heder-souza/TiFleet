@@ -1,0 +1,6 @@
+
+# quando o usuario tentar acessar um arquivo sem ter a autorização ele volta a pagina inicial
+ErrorDocument 403 http://localhost/TiFleet/index.php
+
+#bloqueia a opção de listar os arquivos do diretorio
+Options -Indexes 
