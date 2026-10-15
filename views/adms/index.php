@@ -17,5 +17,6 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['perfil']) || $_SESSION['perfil'
 </head>
 <body>
     <h1>Dashboard Administrativo</h1>
+    <a href="../../controller/logout.php">sair</a>
 </body>
 </html>

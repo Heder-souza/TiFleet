@@ -19,13 +19,13 @@ if (!empty($_POST['email']) && !empty($_POST['senha'])) {
       "email" => $email  
     ]);
 
-    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);//para receber os valores como um array associativo
 
     if (!$usuario || !password_verify($senha, $usuario['senha'])) {
         echo "email ou senha incorretos";
     }else{
 
-        session_regenerate_id(true);
+        session_regenerate_id(true);//cria uma nova sessão após o login para evitar session_fixation
 
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
